@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presença</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <nav>
+  
+        <div class="menu">
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+    
+            <h1>Lista de Presença</h1>
+        </div>
+        <div class="links" id="menuLinks">
+            <a href="index.html">Home</a>
+            <a href="mapa.html">Mapa</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </nav>
+    
+    <form id="Lista de Presença-form">
+        <h2>Marque sua Presença</h2>
+        <input type="text" id="nome" placeholder="Seu nome:" required>
+        <input type="text" id="resumo_aula" placeholder="Resumo Aula:" required>
+        <input type="text" id="mensagem_do_aluno" placeholder="Mensagem do Aluno:" required>
+        <input type="file" id="photo" accept="image/*" required>
+        <button type="submit">Marcar Presença</button>
+    </form>
+
+    <div id="Presença-list"></div>
+
+    <script src="app.js"></script>
+    
+    <script>
+        function toggleMenu() {
+            const links = document.getElementById('menuLinks');
+            links.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
